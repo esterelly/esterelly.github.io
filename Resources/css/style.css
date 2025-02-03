@@ -1,0 +1,529 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Ensure the entire page takes at least the full height of the screen */
+html, body {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+}
+
+body {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: #0B0D2B;
+    background-image: url('../img/nightSky.png');
+    background-size: 100% 100%;
+    background-attachment: fixed;
+}
+
+/* Container covering full width */
+.clouds {
+    position: fixed;       /* Fixes the div to the viewport */
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    z-index: -1;           /* Places it behind all other elements */
+    background: url('../img/nightClouds.png') repeat-x;
+    background-size: auto 100%;
+    animation: slide 150s linear infinite;
+    pointer-events: none;
+  }
+  
+  /* Keyframe animation */
+  @keyframes slide {
+    from {
+      background-position: 0 0;
+    }
+    to {
+      background-position: -1984px 0;
+    }
+  }
+  
+
+h1{
+    color:white;
+    margin: 0px auto;
+    text-align: center;
+    font-weight: normal;
+}
+
+h3{
+    color: #b3d8ff;
+    font-weight: bold;
+    padding: 0px;
+    padding-bottom: 5px;
+    font-size: 16px;
+}
+
+h2{
+    color: white;
+    padding-bottom: 5px;
+}
+
+/* Main content should grow to push the footer down */
+main {
+    flex: 1;
+}
+
+/* NAV BAR */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 30px;
+    /* background-color: #333; */
+}
+
+.logo img {
+    height: 60px;
+}
+
+.nav-links {
+    list-style: none;
+    display: flex;
+}
+
+.nav-links li {
+    margin-right: 25px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-links a:hover {
+    /* text-decoration: underline; */
+    font-weight: bold;
+    color: #b3d8ff
+}
+
+/* INTRO */
+@keyframes fadeInUp {
+    0% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+    100% {
+      transform: translateY(0%);
+      opacity: 1;
+    }
+  }
+  
+
+.intro-container {
+    display: flex;
+    align-items: center;
+    padding: 70px 0px;
+    width: 1300px;
+    margin-right: auto;
+    margin-left: auto;
+    justify-content: center;
+    animation: 1.5s fadeInUp;
+}
+
+.intro-image {
+    width: 400px;
+    height: 400px;
+    object-fit: cover;
+    margin-right: 20px;
+    overflow: hidden;
+    border-radius: 50%;
+}
+
+.intro-description {
+    max-width: 600px;
+}
+
+.intro-container p{
+    color: #b3d8ff;
+}
+
+/* FOOTER */
+footer {
+    /* background-color: #fff5f8; */
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 1);
+    padding: 20px;
+    width: 100%;
+    position: relative;
+    bottom: 0;
+    font-weight: bold;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 10px 0px;
+}
+
+.footer-column {
+    display: flex;
+    flex-direction: column;
+}
+
+.footer-column-right {
+    display: flex; /* Use flexbox for horizontal alignment */
+    gap: 20px; /* Space between the icons */
+    align-items: center; /* Vertically center the icons */
+    justify-content: flex-start; /* Align icons to the left */
+}
+
+.footer-column-right a {
+    color: #fbfbb3;
+    text-decoration: none;
+    font-size: 25px; 
+}
+
+.footer-column a {
+    color: #fbfbb3;
+    text-decoration: none;
+    font-weight: normal;
+    /* font-size: 30px;  */
+}
+
+.footer-column a:hover {
+    text-decoration: underline;
+    color: #ffff87;
+}
+
+.footer-column-right a:hover{
+    color: #ffff87;
+    font-size: 26px;
+}
+
+
+/* HOBBY CARDS */
+.card-container {
+    display: flex;
+    gap: 30px; /* Space between cards */
+    margin: 25px;
+    margin-right: auto;
+    margin-left: auto;
+    justify-content: center;
+    padding-bottom: 25px;
+    animation: 0.7s fadeInUp;
+}
+
+.card {
+    background-color: rgba(7, 9, 33, 0.8);
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    width: 380px; /* Set a fixed width for each card */
+}
+
+.card h2 {
+    margin-bottom: 10px;
+    color: #b3d8ff;
+    font-size: 20px;
+    font-weight: bold;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 1);
+}
+
+.card p {
+    margin-top: 10px;
+    padding: 12px;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 1);
+    /* background-color: rgba(0, 0, 0, 0.5); */
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+/* Hobby Image Slider */
+.image-slider {
+    position: relative;
+    width: 100%;
+    height: 380px; /* Square container */
+    overflow: hidden;
+    margin: 0 5px;
+    display: flex;
+    /* align-items: center; */
+    /* justify-content: center; */
+}
+
+.image-slider img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ensures image fully fills the square without gaps */
+    position: absolute;
+    opacity: 0;
+    transition: opacity 0.25s ease-in-out;
+}
+
+/* Show the first image by default */
+.image-slider img:first-child {
+    opacity: 1;
+}
+
+/* New button container for navigation buttons */
+.button-slider {
+    display: flex;
+    justify-content: center; /* Center the buttons */
+    margin-top: 10px; /* Add space between image and buttons */
+    gap: 10px; /* Add space between the buttons */
+}
+
+/* Style buttons */
+.prev, .next {
+    position: static; /* Remove absolute positioning */
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    border: none;
+    height: 30px;
+    margin-top: auto;
+    margin-bottom: auto;
+    cursor: pointer;
+    font-size: 18px;
+    padding: 0;
+    border-radius: 50%; /* Circular buttons */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: background-color 0.25s ease-in-out;
+}
+
+/* Button Hover Effect */
+.prev:hover,
+.next:hover {
+    color:#8ea4dc;
+}
+
+/* Project carousel container with buttons */
+.projectCarousel{
+    width: 1100px;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+    display: flex;
+    animation: 0.7s fadeInUp;
+    /* background-color: aqua; */
+}
+
+/* project nav Buttons */
+.prevProj, .nextProj {
+    background-color: rgba(0, 0, 0, 0);
+    color: white;
+    border: none;
+    width: 50px;  /* Ensure equal width and height */
+    height: 50px;
+    cursor: pointer;
+    font-size: 40px;
+    padding: 0.08%;
+    border-radius: 50%; /* This makes it a perfect circle */
+    margin: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    pointer-events: all;
+    opacity: 1;
+    top: 50%; /* Center buttons vertically */
+    z-index: 1; /* Make sure buttons stay on top */
+}
+
+.prevProj:hover, .nextProj:hover {
+    color:#b3d8ff;
+    font-size: 43px;
+    padding: 0;
+}
+
+/* Project wrapper */
+.projectWrapper{
+    display: flex;
+    width: 300%;
+}
+
+/* Project Card */
+.project {
+    border-radius: 10px;
+    padding: 30px;
+    max-width: 1100px;
+    width: 100%;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    flex-shrink: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    flex: 0 0 100%;
+
+    opacity: 0;
+    transition: opacity 0.2s ease-in-out;
+    width: 100%;
+}
+
+.project h2{
+    color:#b3d8ff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 1);
+    padding-bottom: 15px;
+}
+
+/* Image */
+.project img {
+    width: 100%;
+    max-width: 950px; /* Limit the image size */
+    height: auto;
+    object-fit: cover;
+    border-radius: 5px; /* Optional: rounded corners */
+    margin-bottom: 20px;
+}
+
+/* Project Details */
+.project-details {
+    display: flex;
+    /* justify-content: space-between; */
+    margin-top: 15px;
+    width: 100%;
+    padding-left: 50px;
+    padding-right: 50px;
+    background-color: rgba(7, 9, 33, 0.8);
+    padding: 20px;
+    border-radius: 5px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 1);
+}
+
+/* Skills Column (Thinner) */
+.skills {
+    width: 20%; /* Thinner column */
+    text-align: left;
+    /* margin-right: 10px; */
+}
+
+/* Description Column (Wider) */
+.description {
+    width: 80%; /* Wider column */
+    text-align: left;
+}
+
+.description p{
+    color:white;
+    font-size: 16px;
+}
+
+.skills ul {
+    padding-left: 20px;
+    color:white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 1);
+    font-size: 16px;
+}
+
+.skills li {
+    list-style: disc;
+}
+
+/* Button */
+.project-button {
+    display: block;
+    text-decoration: none;
+    background-color: #b3d8ff;
+    color: black;
+    padding: 15px 25px;
+    border-radius: 5px;
+    margin-top: 25px;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, .5);
+}
+
+.project-button:hover {
+    background-color: #8ea4dc;
+}
+
+/* INTRO pdf download button */
+.pdf-button {
+    display: block;
+    text-decoration: none;
+    background-color: #b3d8ff;
+    color: black;
+    padding: 15px 25px;
+    border-radius: 5px;
+    margin-top: 25px;
+    width: 200px;
+    text-align: center;
+    box-shadow: 1px 2px 3px rgba(0, 0, 0, .5);
+}
+
+.pdf-button:hover {
+    background-color: #8ea4dc;
+}
+
+.pdf-button.resume{
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+.resume-container{
+    max-width: 1100px;
+    background-color: rgba(7, 9, 33, 0.8);
+    border-radius: 5px;
+    padding: 30px;
+    padding-top: 0;
+    margin: 25px auto;
+}
+
+.resume-container a:hover{
+    color: #8ea4dc;
+    text-decoration: underline;
+}
+
+.resume-item{
+    margin-bottom: 25px;
+}
+
+.resume-item h2{
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 1);
+}
+
+.resume-item p, strong, ul, li{
+    color: #b3d8ff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 1);
+}
+
+.resume-item ul{
+    margin-bottom: 25px;
+}
+
+.school{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.contact-info{
+    margin: 25px;
+    align-items: center;
+    text-align: center;
+    text-decoration: none;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 1);
+
+}
+
+.contact-info h1{
+    color: #b3d8ff;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 1);
+    width: 100%;
+    text-align: center;
+    font-weight: bold;
+    padding: 0;
+    margin: 0;
+    margin-bottom: 10px;
+}
+
+.contact-info a{
+    text-decoration: none;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 1);
+}
