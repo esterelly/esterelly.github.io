@@ -629,7 +629,7 @@ footer {
     }
 
     .pdf-button{
-        width: 95%;
+        width: 80%;
         min-width: 5px;
     }
 
@@ -733,6 +733,10 @@ footer {
         z-index: 12;
     }
 
+    .nav-button:hover{
+        color: #b3d8ff;
+    }
+
     .card-container{
         width: 100%;
         gap: 0;
@@ -750,4 +754,37 @@ footer {
     .footer-container{
         flex-direction: column;
     }
+}
+
+@media screen and (max-width: 368px) {
+    .project{
+        /* max-width: 100px; */
+    }
+
+    .projectWrapper{
+        width: 100%;
+    }
+
+    .projectCarousel{
+        width: 100%;
+    }
+
+    .prevProj, .nextProj {
+        position: absolute;
+        top: 31%;
+        /* transform: translateY(-10%); */
+        width: 40px; 
+        height: 40px;
+        z-index: 10;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 1);
+      }
+
+      .prevProj {
+        left: 10px; 
+      }
+      
+      .nextProj {
+        right: 10px; 
+      }
+
 }
