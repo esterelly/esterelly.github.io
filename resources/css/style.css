@@ -421,6 +421,7 @@ footer {
 
 .skills li {
     list-style: disc;
+    color: white;
 }
 
 /* Button */
@@ -490,10 +491,17 @@ footer {
 .resume-item p, strong, ul, li{
     color: #b3d8ff;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 1);
+    list-style-position: outside;
 }
 
 .resume-item ul{
     margin-bottom: 25px;
+    padding-left: 0;
+}
+
+.resume-item li{
+    list-style-position: outside;
+    margin-left: 1em;
 }
 
 .school{
