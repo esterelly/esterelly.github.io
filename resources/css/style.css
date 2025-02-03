@@ -213,7 +213,7 @@ footer {
     margin-left: auto;
     justify-content: center;
     padding-bottom: 25px;
-    animation: 0.7s fadeInUp;
+    animation: 1.5s fadeInUp;
 }
 
 .card {
@@ -308,7 +308,7 @@ footer {
     margin-left: auto;
     margin-right: auto;
     display: flex;
-    animation: 0.7s fadeInUp;
+    animation: 1.5s fadeInUp;
     /* background-color: aqua; */
 }
 
@@ -471,6 +471,7 @@ footer {
     padding: 30px;
     padding-top: 0;
     margin: 25px auto;
+    animation: 1.5s fadeInUp;
 }
 
 .resume-container a:hover{
