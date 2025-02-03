@@ -610,10 +610,6 @@ footer {
 }
 
 @media screen and (max-width: 480px) {
-    /* .navbar{
-        flex-direction: column-reverse;
-    } */
-
     .header {
         display: flex;
         width: 100%;
@@ -622,18 +618,46 @@ footer {
         padding: 20px 60px;
       }
 
+    .intro-image{
+        width: 80%;
+        min-width: 20px;
+    }
+
+    .intro-description{
+        width: 95%;
+        min-width: 5px;
+    }
+
+    .pdf-button{
+        width: 95%;
+        min-width: 5px;
+    }
+
+    .projectCarousel{
+        width: 90%;
+    }
+
+    .prevProj:hover, .nextProj:hover{
+        font-size: 30px;
+    }
+
+    .prevProj{
+        margin-left: 5px;
+    }
+
+    .nextProj{
+        margin-right: 5px;
+    }
+
     .prevProj, .nextProj{
         margin: 0px;
         margin-top: 25px;
         padding: 0;
+        font-size: 30px;
     }
 
-    .prevProj{
-        margin-left: 10px;
-    }
-
-    .nextProj{
-        margin-right: 10px;
+    .project{
+        padding: 20px;
     }
 
     .header {
@@ -709,8 +733,21 @@ footer {
         z-index: 12;
     }
 
+    .card-container{
+        width: 100%;
+        gap: 0;
+        padding: 0 10px;
+        gap: 20px; 
+    }
+
+    .card{
+        width: 100%;
+        padding: 10px;
+        margin: 30px;
+        margin: 0;
+    }
+
     .footer-container{
         flex-direction: column;
     }
 }
-
