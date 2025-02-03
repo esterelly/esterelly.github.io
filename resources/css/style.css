@@ -8,6 +8,7 @@
 html, body {
     height: 100%;
     margin: 0;
+    overflow: auto;
     display: flex;
     flex-direction: column;
 }
@@ -17,7 +18,8 @@ body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
     background-color: #0B0D2B;
     background-image: url('../img/nightSky.png');
-    background-size: 100% 100%;
+    background-size: auto 100%;
+    background-position: center;
     background-attachment: fixed;
 }
 
@@ -123,7 +125,8 @@ main {
     display: flex;
     align-items: center;
     padding: 70px 0px;
-    width: 1300px;
+    max-width: 1300px;
+    width: 80%;
     margin-right: auto;
     margin-left: auto;
     justify-content: center;
@@ -131,12 +134,14 @@ main {
 }
 
 .intro-image {
-    width: 400px;
-    height: 400px;
+    max-width: 400px;
+    max-height: 400px;
+    min-width: 300px;
     object-fit: cover;
     margin-right: 20px;
     overflow: hidden;
     border-radius: 50%;
+    aspect-ratio: 1 / 1;
 }
 
 .intro-description {
@@ -303,7 +308,8 @@ footer {
 
 /* Project carousel container with buttons */
 .projectCarousel{
-    width: 1100px;
+    max-width: 1100px;
+    width: 100%;
     overflow: hidden;
     margin-left: auto;
     margin-right: auto;
@@ -332,6 +338,14 @@ footer {
     z-index: 1; /* Make sure buttons stay on top */
 }
 
+.prevProj{
+    margin-left: 1em;
+}
+
+.nextProj{
+    margin-right: 1em;
+}
+
 .prevProj:hover, .nextProj:hover {
     color:#b3d8ff;
     font-size: 43px;
@@ -349,7 +363,7 @@ footer {
     border-radius: 10px;
     padding: 30px;
     max-width: 1100px;
-    width: 100%;
+    width: 100px;
     text-align: center;
     margin-left: auto;
     margin-right: auto;
@@ -358,10 +372,8 @@ footer {
     flex-direction: column;
     align-items: center;
     flex: 0 0 100%;
-
     opacity: 0;
     transition: opacity 0.2s ease-in-out;
-    width: 100%;
 }
 
 .project h2{
@@ -373,7 +385,7 @@ footer {
 /* Image */
 .project img {
     width: 100%;
-    max-width: 950px; /* Limit the image size */
+    /* max-width: 950px;  */
     height: auto;
     object-fit: cover;
     border-radius: 5px; /* Optional: rounded corners */
@@ -392,19 +404,20 @@ footer {
     padding: 20px;
     border-radius: 5px;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 1);
+    gap: 15px;
 }
 
 /* Skills Column (Thinner) */
 .skills {
     width: 20%; /* Thinner column */
     text-align: left;
-    /* margin-right: 10px; */
 }
 
 /* Description Column (Wider) */
 .description {
     width: 80%; /* Wider column */
     text-align: left;
+    /* margin-left: 5px; */
 }
 
 .description p{
@@ -473,6 +486,12 @@ footer {
     padding-top: 0;
     margin: 25px auto;
     animation: 1.5s fadeInUp;
+    margin-left: 15px;
+    margin-right: 15px;
+}
+
+.contact-info{
+    word-wrap:break-word;
 }
 
 .resume-container a:hover{
@@ -536,3 +555,162 @@ footer {
     color: white;
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 1);
 }
+
+/* Hamburg menu */
+.nav-checkbox {
+    display: none;
+  }
+
+  /* Style the menu button */
+.nav-button {
+    display: none;
+    cursor: pointer;
+    font-size: 28px;
+    padding-left: 10px;
+    color: white;
+    width: fit-content;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 1);
+}
+
+@media screen and (max-width: 768px) {
+    .card-container{
+        flex-direction: column;
+    }
+
+    .card{
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    .project-details{
+        flex-direction: column-reverse;
+        margin: 0;
+    }
+
+    .description, .skills{
+        width: 100%;
+        /* margin: 0;
+        padding: 0; */
+    }
+
+    .intro-container{
+        flex-direction: column;
+    }
+
+    .intro-description{
+        text-align: center;
+        margin: 15px;
+        text-shadow: 1px 1px 3px rgba(0, 0, 0, 1);
+    }
+
+    .pdf-button{
+        margin: 15px auto;
+        text-shadow: none;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    /* .navbar{
+        flex-direction: column-reverse;
+    } */
+
+    .header {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 60px;
+      }
+
+    .prevProj, .nextProj{
+        margin: 0px;
+        margin-top: 25px;
+        padding: 0;
+    }
+
+    .prevProj{
+        margin-left: 10px;
+    }
+
+    .nextProj{
+        margin-right: 10px;
+    }
+
+    .header {
+        display: flex;
+        width: 100%;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 60px;
+        position: relative; /* Keep header in normal flow */
+        z-index: 10;
+    }
+
+    .navbar{
+        overflow: visible;
+        align-items: normal;
+        padding: 0px;
+        justify-content: normal;
+        /* margin-bottom: 25px; */
+        /* gap: 5px; */
+        /* margin: auto; */
+        /* height: 70px; */
+        padding: 10px;
+    }
+
+    .nav-links{
+        display: none;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 80%; /* Adjust width as needed */
+        height: 100vh;
+        background-color: #8ea4dc;
+        z-index: 10;
+        padding: 45px;
+        padding-top: 55px;
+        border-bottom-right-radius: 5px;
+    }
+
+    .nav-links li{
+        padding: 10px;
+        text-shadow: none;
+        color:#0B0D2B
+    }
+
+    .nav-links a{
+        color:#0B0D2B
+    }
+
+    .logo{
+        height: 100%;
+        margin: 0;
+        margin-left: auto;
+        top: 0;
+    }
+
+    .nav-button {
+        display: block;
+        position: relative;
+        z-index: 11; /* Ensure it's above everything */
+    }
+
+    .nav-checkbox:checked + .nav-button + .nav-links {
+        display: block;
+    }
+
+    .nav-checkbox:checked + .nav-button{
+        position: absolute;
+        top: 10px;
+        left: 10px;
+        background-color: #8ea4dc;
+        text-shadow: none;
+        color:#0B0D2B;
+        z-index: 12;
+    }
+
+    .footer-container{
+        flex-direction: column;
+    }
+}
+
