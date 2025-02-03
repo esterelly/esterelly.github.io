@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Estella's Website</title>
+    <link rel="icon" type="png" href="../resources/img/logo.png">
+    <link rel="stylesheet" href="../resources/css/style.css">
+    <script src="https://kit.fontawesome.com/516ea5d673.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="clouds"></div>
+    <header>
+        <nav class="navbar">
+            <ul class="nav-links">
+                <li><a href="home.html">HOME</a></li>
+                <li><a href="hobbies.html">HOBBIES</a></li>
+                <li><a href="projects.html">PROJECTS</a></li>
+                <li><a href="resume.html">RESUME</a></li>
+            </ul>
+            <div class="logo">
+                <p><a href="home.html">
+                    <img src="../resources/img/logo.png" class="logo" alt="logo">
+                    </a></p>
+            </div>
+        </nav>
+    </header>
+    
+    <main>
+        <h1>Hobbies</h1>
+        <section class="card-container">
+            <!-- Card 1 -->
+            <div class="card">
+                <h2>Digital Art</h2>
+                <div class="button-slider">
+                    <button class="prev" onclick="prevSlide(0)">&#10094;</button>
+                    <div class="image-slider">
+                        <img src="../resources/img/yotd 2mb.png" class="slide" alt="art 1">
+                        <img src="../resources/img/apothecary.jpg" class="slide" alt="art 2">
+                        <img src="../resources/img/2mb esper.png" class="slide" alt="art 3">
+                    </div>
+                    <button class="next" onclick="nextSlide(0)">&#10095;</button>
+                </div>
+                <p>I've loved creating art for as long as I can remember. I now sell my work online and at conventions around 
+                    the US. I try to incorporate art in as many aspects of my life as I can.
+                    In fact, the logo and background for this website are drawn by me!</p>
+            </div>
+    
+            <!-- Card 2 -->
+            <div class="card">
+                <h2>Nails</h2>
+                <div class="button-slider">
+                    <button class="prev" onclick="prevSlide(1)">&#10094;</button>
+                    <div class="image-slider">
+                        <img src="../resources/img/pinkNails.jpg" class="slide" alt="pink nails">
+                        <img src="../resources/img/xmasNails.jpg" class="slide" alt="xmas nails">
+                        <img src="../resources/img/whiteNails.jpg" class="slide" alt="white nails">
+                    </div>
+                    <button class="next" onclick="nextSlide(1)">&#10095;</button>
+                </div>
+                <p>I do my own gel-x nails and enjoy making intricate and unique nail art in a variety of styles. It is a
+                    creative outlet that brings me joy.
+                </p>
+            </div>
+    
+            <!-- Card 3 -->
+            <div class="card">
+                <h2>Cello</h2>
+                <div class="button-slider">
+                    <button class="prev" onclick="prevSlide(2)">&#10094;</button>
+                    <div class="image-slider">
+                        <img src="../resources/img/cello.jpg" class="slide" alt="Image 1">
+                        <img src="../resources/img/cello2.jpg" class="slide" alt="Image 2">
+                    </div>
+                    <button class="next" onclick="nextSlide(2)">&#10095;</button>
+                </div>
+                <p>Music has always been a passion of mine, and after dabbling in the piano and ukulele,
+                    I fell in love with the cello. I took cello lessons for five years and have also played in youth orchestras. I hope to
+                    join a college orchestra to hone my skills!
+                </p>
+            </div>
+        </section>
+    
+        
+    </main>
+    
+    <footer>
+        <div class="footer-container">
+            <div class="footer-column left">
+                <p>Contact Me</p>
+                <a style="font-size: 15px;" href="mailto:Estella.Duong@colorado.edu" target="_blank">Estella.Duong@colorado.edu</a>
+            </div>
+            <div class="footer-column-right">
+                <!-- <p>FIND ME</p> -->
+                <a href="https://www.instagram.com/esterellyy/" target="_blank">
+                        <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="https://github.com/EstellaDuong" target="_blank">
+                    <i class="fa-brands fa-github"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../resources/js/script.js"></script>
+</body>
+</html>
