@@ -771,7 +771,7 @@ footer {
 
     .prevProj, .nextProj {
         position: absolute;
-        top: 38%;
+        top: 32%;
         /* transform: translateY(-10%); */
         width: 40px; 
         height: 40px;
