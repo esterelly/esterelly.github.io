@@ -337,19 +337,19 @@ footer {
     top: 50%; /* Center buttons vertically */
     z-index: 1; /* Make sure buttons stay on top */
 }
-
+/* 
 .prevProj{
     margin-left: 1em;
 }
 
 .nextProj{
     margin-right: 1em;
-}
+} */
 
 .prevProj:hover, .nextProj:hover {
     color:#b3d8ff;
     font-size: 43px;
-    padding: 0;
+    padding: 0px;
 }
 
 /* Project wrapper */
@@ -572,6 +572,11 @@ footer {
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 1);
 }
 
+@media screen and (max-width: 1155px) {
+    
+}
+
+
 @media screen and (max-width: 768px) {
     .card-container{
         flex-direction: column;
@@ -770,7 +775,7 @@ footer {
     }
 
     .prevProj, .nextProj {
-        position: absolute;
+        position:absolute;
         top: 32%;
         /* transform: translateY(-10%); */
         width: 40px; 
