@@ -570,8 +570,11 @@ footer {
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 1);
 }
 
-@media screen and (max-width: 1155px) {
-    
+@media screen and (max-width: 1130px) {
+    .resume-container{
+        margin-left: 15px;
+        margin-right: 15px;
+    }
 }
 
 
@@ -610,6 +613,7 @@ footer {
         margin: 15px auto;
         text-shadow: none;
     }
+
 }
 
 @media screen and (max-width: 480px) {
@@ -752,11 +756,6 @@ footer {
         padding: 10px;
         margin: 30px;
         margin: 0;
-    }
-
-    .resume-container{
-        margin-left: 15px;
-        margin-right: 15px;
     }
 
     .footer-container{
