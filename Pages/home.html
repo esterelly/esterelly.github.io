@@ -3,63 +3,47 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Estella's Website</title>
-    <link rel="icon" type="png" href="../resources/img/logo.png">
+    <title>HOME | Estella's Portfolio</title>
+    <link rel="icon" type="image/png" href="../resources/img/logo.png">
     <link rel="stylesheet" href="../resources/css/style.css">
+    <link rel="stylesheet" href="../resources/css/home.css">
     <script src="https://kit.fontawesome.com/516ea5d673.js" crossorigin="anonymous"></script>
 </head>
 
 <body>
+    <div id="navbar-placeholder"></div>
+
     <div class="clouds"></div>
-    <header>
-        <nav class="navbar">
-            <ul class="nav-links">
-                <li><a href="home.html">HOME</a></li>
-                <li><a href="hobbies.html">HOBBIES</a></li>
-                <li><a href="projects.html">PROJECTS</a></li>
-                <li><a href="resume.html">RESUME</a></li>
-            </ul>
-            <div class="logo">
-                <p><a href="home.html">
-                    <img src="../resources/img/logo.png" class="logo" alt="logo">
-                    </a></p>
-            </div>
-        </nav>
-    </header>
-    
+
     <main>
-        <!-- <h1>Estella</h1> -->
         <div class="intro-container">
             <img src="../resources/img/headshot.jpg" alt="Estella Duong" class="intro-image">
             <div class="intro-description">
                 <h2>About Me</h2>
-                <p>Hello! I'm Estella Duong. I'm currently a second year at CU Boulder. My major is Creative Technology 
-                    and Design and my minor is Computer Science. Feel free to download my resume below!
-                </p>
-                <a href="../resources/files/Estella_Duong_Resume.pdf" target="_blank" download="Estella_Duong_Resume.pdf" class="pdf-button">
-                    Download PDF
-                  </a>
+                <p>The first time I discovered I could burn my fingerprints off was at the ripe age of 6. My first hot glue gun and my bare fingers quickly became close friends. Whether it was building miniatures, crafting my own inventions, or experimenting with mixed media drawings, I was always doing something creative. Fifteen years later, not much has changed. I’m still burning my fingers off with hot glue, this time while making my own automatic egg incubator, competitive sniper board game, or whatever creative endeavor my heart desires. </p>
+                <p><br>Art and creativity have always been a central part of my life, but what if I could also combine that with technology? When I discovered the Creative Technology and Design program at CU Boulder, I was immediately drawn to it. It felt like a place where art and engineering naturally overlap. CTD was a space where I could build playful tools using UI/UX design, digital art, and interactive systems, focusing on things that are both expressive and functional. I learned how to keep experimenting and to keep turning ideas into things people can actually interact with and enjoy. </p>
+                <a href="../resources/files/Estella_Duong_Resume.pdf" download="Estella_Duong_Resume.pdf" class="pdf-button">
+                    Download Resume</a>
             </div>
         </div>
+
+        <section class="carousel-section">
+            <h2>Projects</h2>
+            <div class="carousel-container">
+                <button class="carousel-arrow left" id="carousel-prev">&#8249;</button>
+                <div class="carousel-track" id="carousel-track"></div>
+                <button class="carousel-arrow right" id="carousel-next">&#8250;</button>
+            </div>
+            <div style="text-align: center; margin-top: 1rem;">
+                <a href="projects.html" class="view-all-button">All Projects</a>
+            </div>
+        </section>
+
     </main>
-    
-    <footer>
-        <div class="footer-container">
-            <div class="footer-column left">
-                <p>Contact Me</p>
-                <a style="font-size: 15px;" href="mailto:Estella.Duong@colorado.edu" target="_blank">Estella.Duong@colorado.edu</a>
-            </div>
-            <div class="footer-column-right">
-                <!-- <p>FIND ME</p> -->
-                <a href="https://www.instagram.com/esterellyy/" target="_blank">
-                        <i class="fa-brands fa-instagram"></i>
-                </a>
-                <a href="https://github.com/EstellaDuong" target="_blank">
-                    <i class="fa-brands fa-github"></i>
-                </a>
-            </div>
-        </div>
-    </footer>
+
+    <div id="footer-placeholder"></div>
+
+    <script src="/resources/js/script.js"></script>
     
 </body>
 </html>
